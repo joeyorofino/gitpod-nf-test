@@ -3,7 +3,8 @@ image:
 
 tasks:
     - name: terminal startup
-      command:
-        conda init bash \
-        clear \
-        conda activate temp_env \
+      command: |
+          conda init
+          source ~/.bashrc
+          clear
+          conda activate temp_env
