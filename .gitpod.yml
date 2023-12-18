@@ -1,2 +1,10 @@
 image:
     file: .gitpod.Dockerfile
+
+tasks:
+    - name: terminal startup
+      command:
+        conda init
+        source ~/.bashrc
+        clear
+        conda activate temp_env
