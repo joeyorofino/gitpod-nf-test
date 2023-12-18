@@ -1,0 +1,24 @@
+rule all:
+	input:
+		'A_filtered_numbered.txt',
+		'B_filtered_numbered.txt'
+
+rule grep_filter:
+	input:
+		'{letter}.txt'
+	output:
+		'{letter}_filtered.txt'
+	shell:
+		'''
+		grep -E "^[[:alpha:]]" {input} > {output}
+		'''
+
+rule add_line_nums:
+	input:
+		'{letter}_filtered.txt'
+	output:
+		'{letter}_filtered_numbered.txt'
+	shell:
+		'''
+		cat -b {input} > {output}
+		''' 
