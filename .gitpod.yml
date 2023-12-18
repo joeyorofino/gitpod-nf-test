@@ -1,1 +1,2 @@
-image: nextflow/nextflow:latest
+image:
+    file: .gitpod.Dockerfile
