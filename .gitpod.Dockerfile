@@ -12,5 +12,5 @@ RUN chown -R gitpod:gitpod /opt/conda
 
 USER gitpod
 
-RUN conda create -n temp_env -c conda-forge -c bioconda nextflow samtools snakemake
+RUN conda create -n temp_env -c conda-forge -c bioconda nextflow samtools snakemake singularity
 
