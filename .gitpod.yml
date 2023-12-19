@@ -8,3 +8,7 @@ tasks:
           source ~/.bashrc
           clear
           conda activate temp_env
+vscode:
+    extensions:
+        - nextflow.nextflow
+        - snakemake.snakemake-lang
